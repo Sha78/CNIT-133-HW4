@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CNIT133 HW4 PT4</title>
+    <meta charset="utf-8">
+    <meta name="description" content="This page determines the retail price for each product of 6 items.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        body {
+            background-color: grey;
+        }
+        
+        nav {
+            margin-top: 2%;
+        }
+        
+        ul {
+            margin-left: 25%;
+            margin-bottom: 5px;
+        }
+        
+        li,
+        a {
+            list-style-type: none;
+            display: inline-block;
+            text-decoration: none;
+            background-color: greenyellow;
+            padding: 10px;
+            color: black;
+            font-weight: bold;
+        }
+        
+        a:hover {
+            color: red;
+        }
+        
+        li:hover {
+            background-color: grey;
+        }
+        
+        table,
+        td {
+            padding: 3px;
+            position: relative;
+            float: left;
+        }
+        
+        td:first-of-type {
+            border: 1px solid black;
+            padding: 0px;
+        }
+        
+        div {
+            height: 600px;
+            width: 75%;
+            background-color: red;
+            float: right;
+            position: relative
+        }
+        
+        aside {
+            width: 20%;
+        }
+        
+        h2 {
+            margin: 20% 38%;
+        }
+        
+        footer {
+            position: fixed;
+            bottom: 0;
+            margin-left: 35%;
+        }
+        
+        .a {
+            text-align: left;
+        }
+        
+        .q,
+        .r {
+            text-align: right;
+        }
+        
+        h3 {
+            position: relative;
+            display: inline;
+        }
+        
+        #a {
+            margin-right: 20px;
+            margin-left: 10px;
+        }
+        
+        #b {
+            margin-right: 10px;
+        }
+        
+        #c {
+            margin-right: 10px;
+        }
+        
+        #d {
+            margin-right: 30px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://fog.ccsf.edu/~srubin/jQvalidate.js"></script>
+
+    <script>
+  $(document).ready(function () {
+$("#myform").validate({
+// Rules for each input item
+rules: {
+qty1: {
+required: true,
+number: true,
+min: 0
+
+},
+qty2: {
+required: true,
+number: true,
+min: 0
+},
+qty3: {
+required: true,
+number: true,
+min: 0
+},
+qty4: {
+required: true,
+number: true,
+min: 0
+},
+qty5: {
+required: true,
+number: true,
+min: 0
+}
+}
+});
+});
+        
+    </script>
+
+
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="https://hills.ccsf.edu/~shaycraf/CNIT133/hw1">HW 1</a></li>
+            <li> <a href="https://hills.ccsf.edu/~shaycraf/CNIT133/hw2">HW 2</a></li>
+            <li> <a href="https://hills.ccsf.edu/~shaycraf/CNIT133/hw3">HW 3</a></li>
+            <li> <a href="https://hills.ccsf.edu/~shaycraf/CNIT133/hw4">HW 4</a></li>
+            <li> <a href="https://hills.ccsf.edu/~shaycraf/CNIT133/hw5">HW 5</a></li>
+            <li> <a href="https://hills.ccsf.edu/~shaycraf/CNIT133/hw6">HW 6</a></li>
+            <li> <a href="undercnst7.html">HW 7</a></li>
+            <li> <a href="undercnst8.html">HW 8</a></li>
+
+        </ul>
+
+    </nav>
+    <aside>
+        <table>
+            <tr>
+                <td><a href=pt1.html>Part 1:</a></td>
+                <td>Part one uses the for and while loops to calulate numers
+                    <br> and uses draggable jQuery.</td>
+            </tr>
+            <tr>
+                <td><a href=pt2.html>Part 2:</a></td>
+
+                <td>This script determines the gross pay for each of six employees.</td>
+            </tr>
+            <tr>
+                <td><a href=pt3.html>Part 3:</a></td>
+                <td>f This script calculates compound interest on a principal of $1000 for interest rates of 5, 6, 7, 8, 9, and 10%, for years 1 through 10.</td>
+            </tr>
+            <tr>
+                <td><a href=pt4.html>Part 4:</a></td>
+                <td>This script uses a switch statement to help determine the retail price for each product and calculates and displays the retail amount for each product and the total retail amount of all the products sold last week.</td>
+            </tr>
+            <tr>
+                <td><a href=pt5.html>Part 5:</a></td>
+                <td>This script uses a form text box for one of three different list formats. It Uses jQuery to show/hide instructions and validate input data.</td>
+            </tr>
+            <tr>
+                <td><a href=pt6.html>Part 6:</a></td>
+                <td>This page contains a script that uses repetition and switch statements to print the song "The Twelve Days of Christmas".</td>
+            </tr>
+
+
+        </table>
+    </aside>
+    <div>
+        <h3 id="a">Product:</h3>
+        <h3 id="b">Quantity:</h3>
+        <h3 id="c">Price:</h3>
+        <h3 id="d">Amount:</h3>
+
+
+        <form id="myform" >
+            <table border="1">
+
+
+
+                <tr>
+                    <td>
+                        <input class="q" type="text" id="p1" size="10" value="1" disabled="disabled" />
+                    </td>
+                    <td>
+                        <input class="r" type="text" id="qty1" name="qty1" size="5" />
+                    </td>
+                    <td>2.98</td>
+                    <td>
+                        <input class="r" type="text" id="amt1" size="8">
+                    </td>
+                </tr>
+
+                <tr>
+
+                    <td>
+                        <input class="q" type="text" id="p2" size="10" value="2" disabled="disabled" />
+                    </td>
+                    <td>
+                        <input class="r" type="text" id="qty2" name="qty2" size="5" />
+                    </td>
+                    <td>4.50</td>
+                    <td>
+                        <input class="r" type="text" id="amt2" size="8" />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input class="q" type="text" id="p3" size="10" value="3" disabled="disabled" />
+                    </td>
+
+                    <td>
+                        <input class="r" type="text" id="qty3" name="qty3" size="5" />
+                    </td>
+                    <td>9.98</td>
+                    <td>
+                        <input class="r" type="text" id="amt3" size="8" />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input class="q" type="text" id="p4" size="10" value="4" disabled="disabled" />
+                    </td>
+                    <td>
+                        <input class="r" type="text" id="qty4" name="qty4" size="5" />
+                    </td>
+
+                    <td>4.49</td>
+                    <td>
+                        <input class="r" type="text" id="amt4" size="8">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input class="q" type="text" id="p5" size="10" value="5" disabled="disabled" />
+                    </td>
+                    <td>
+                        <input class="r" type="text" id="qty5" name="qty5" size="5">
+                    </td>
+                    <td>6.87</td>
+
+                    <td>
+                        <input class="r" type="text" id="amt5" size="8">
+                    </td>
+                </tr>
+
+                <tr>
+                    <th colspan="3" align="left">Total Amount Sold</th>
+                    <td>
+                        <input class="r" type="text" id="totalSales" size="8">
+                    </td>
+                </tr>
+
+                <tr>
+
+                    <td>
+                        <input type="button" value='Calculate' onclick=sales()>
+                    </td>
+
+                    <td>
+                        <input type="reset" value="Reset" size="10">
+                    </td>
+                </tr>
+
+
+            </table>
+        </form>
+
+
+
+
+    </div>
+
+    <script>
+        var qty1, qty2, qty3, qty4, qty5, amt1, amt2, amt3, amt4, amt5;
+
+        function sales() {
+            
+          if (!$("#myform").valid()) {
+return;
+}
+
+            
+
+
+                qty1 = parseInt(document.getElementById('qty1').value);
+                qty2 = parseInt(document.getElementById('qty2').value);
+                qty3 = parseInt(document.getElementById('qty3').value);
+                qty4 = parseInt(document.getElementById('qty4').value);
+                qty5 = parseInt(document.getElementById('qty5').value);
+
+            
+                for (var num = 1; num <= 5; num++) {
+
+
+                    switch (num) {
+
+                    case 1:
+                        amount1 = 2.98 * qty1;
+                        document.getElementById('amt1').value = amount1.toFixed(2);
+                        break;
+
+                    case 2:
+                        amount2 = 4.50 * qty2;
+                        document.getElementById('amt2').value = amount2.toFixed(2);
+                        break;
+
+                    case 3:
+                        amount3 = 9.98 * qty3;
+                        document.getElementById('amt3').value = amount3.toFixed(2);
+                        break;
+
+                    case 4:
+                        amount4 = 4.49 * qty4;
+                        document.getElementById('amt4').value = amount4.toFixed(2);
+                        break;
+
+                    case 5:
+                        amount5 = 6.87 * qty5;
+                        document.getElementById('amt5').value = amount5.toFixed(2);
+                        break;
+
+                    }
+                
+
+                }
+            if (isNaN(qty1 && qty2 && qty3 && qty4 && qty5)) {
+                alert("Enter numeric values!");
+        }else{
+                addSales = amount1 + amount2 + amount3 + amount4 + amount5;
+                document.getElementById('totalSales').value = addSales.toFixed(2);
+            };
+            };
+        
+    </script>
+
+
+    <footer> <span><a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fhills.ccsf.edu%2F~shaycraf%2FCNIT133%2Fhw4&profile=css3&usermedium=all&warning=1&vextwarning=&lang=en" target="_blank">
+            <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" />
+        </a>
+
+        <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fhills.ccsf.edu%2F~shaycraf%2FCNIT133%2Fhw4%2F" target="_blank">
+            <img src="https://www.w3.org/html/logo/badge/html5-badge-h-css3-semantics.png" width="165" height="31" alt="HTML5 Powered with CSS3 / Styling, and Semantics" title="HTML5 Powered with CSS3 / Styling, and Semantics">
+            </a></span></footer>
+    <!--Part 4: 
+
+A mail-order house sells five different products whose retail prices are as follows: product 1, $2.98, product 2, $4.50, product 3, $9.98, product 4, $4.49, product 5, $6.87. Create a webpage that contains a script that inputs the following:
+
+a) Product number (1 through 5)
+b) Quantity sold for that product - (for the week)
+
+Your script should use a switch statement to help determine the retail price for each product and should calculate and display the retail amount for each product and the total retail amount of all the products sold last week. Use form input boxes to obtain the product numbers (hard coded as 1-5) and the quantity sold for each product from the user. Here is an example of the output (Links to an external site.). Be sure to check that the input field, quantity sold, is numeric.-->
+</body>
+
+</html>

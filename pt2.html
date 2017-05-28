@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CNIT133 HW4 PT2</title>
+    <meta charset="utf-8">
+    <meta name="description" content="This page determines gross pay for 6 employees.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        body {
+            background-color: grey;
+        }
+        
+        nav {
+            margin-top: 2%;
+        }
+        
+        ul {
+            margin-left: 25%;
+            margin-bottom: 5px;
+        }
+        
+        li,
+        a {
+            list-style-type: none;
+            display: inline-block;
+            text-decoration: none;
+            background-color: greenyellow;
+            padding: 10px;
+            color: black;
+            font-weight: bold;
+        }
+        a:hover{
+            color:red;
+          
+        }
+        li:hover{
+              background-color:grey;
+        }
+        
+        table, td{
+            
+            padding:3px;
+            position:relative;
+            float:left;
+           
+            
+        }
+        td:first-of-type{
+        border: 1px solid black;
+            padding:0px;
+        }
+      
+        div{
+            height:600px;
+            width:70%;
+            background-color:red;
+            float:right;
+            position:relative;
+            
+        }
+       aside{
+          width:20%;
+          
+      }
+      h2{
+         margin-left: 40%;
+          padding-bottom:20px;
+     }
+      footer{
+          position:fixed;
+          bottom:0;
+          margin-left:35%;
+        
+      }
+      th{
+          float:left;
+          padding-right:60px;
+      }
+      #btns{
+          margin-left:50%;
+      }
+      .hp{
+          margin-left:20px;
+      }
+      #tp{
+          margin-left: 45px;
+      }
+    </style>
+
+
+</head>
+
+<body>
+    <nav>
+        <ul>
+           <li><a href="https://hills.ccsf.edu/~shaycraf/CNIT133/hw1">HW 1</a></li>
+            <li> <a href="https://hills.ccsf.edu/~shaycraf/CNIT133/hw2">HW 2</a></li>
+            <li> <a href="https://hills.ccsf.edu/~shaycraf/CNIT133/hw3">HW 3</a></li>
+            <li> <a href="https://hills.ccsf.edu/~shaycraf/CNIT133/hw4">HW 4</a></li>
+            <li> <a href="https://hills.ccsf.edu/~shaycraf/CNIT133/hw5">HW 5</a></li>
+            <li> <a href="https://hills.ccsf.edu/~shaycraf/CNIT133/hw6">HW 6</a></li>
+            <li> <a href="undercnst7.html">HW 7</a></li>
+            <li> <a href="undercnst8.html">HW 8</a></li>
+
+        </ul>
+
+    </nav>
+    <aside>
+        <table>
+            <tr>
+                <td><a href=pt1.html>Part 1:</a></td>
+                <td>Part one uses the for and while loops to calulate numers<br>
+                and uses draggable jQuery.</td>
+            </tr>
+            <tr>
+                <td><a href=pt2.html>Part 2:</a></td>
+
+                <td>This script determines the gross pay 
+                    for each of six employees.</td>
+            </tr>
+            <tr>
+                <td><a href=pt3.html>Part 3:</a></td>
+                <td> This script calculates compound interest on a principal of $1000 for interest rates of 5, 6, 7, 8, 9, and 10%, for years 1 through 10.</td>
+            </tr>
+            <tr>
+                <td><a href=pt4.html>Part 4:</a></td>
+                <td>This script uses a switch statement to help determine the retail price for each product and calculates and displays the retail amount for each product and the total retail amount of all the products sold last week.</td>
+            </tr>
+            <tr>
+                <td><a href=pt5.html>Part 5:</a></td>
+                <td>This script uses a form text box for one of three different list formats. It Uses jQuery to show/hide instructions and validate input data.</td>
+            </tr>
+            <tr>
+                <td><a href=pt6.html>Part 6:</a></td>
+                <td>This page contains a script that uses repetition and switch statements to print the song "The Twelve Days of Christmas".</td>
+            </tr>
+           
+
+        </table>
+    </aside>
+        <div>
+        <h2>Pay Calculator</h2>
+         <form id="paycalculator" onsubmit="event.preventDefault();payrates()">
+             <table>
+               <tr><th>Employees</th><th>Work Hours</th><th class="hp">Hourly Pay</th></tr>
+
+                 <tr><td>Employee 1</td><td><input type="text" class="tabd1" id="duration1" ></td><td><input type="text" id="hourly1" name="hourly1"</td></tr>
+                 <tr><td>Employee 2</td><td><input type="text" class="tabd1" id="duration2" ></td><td><input type="text" id="hourly2" name="hourly2"</td></tr>
+                 <tr><td>Employee 3</td><td><input type="text" class="tabd1" id="duration3" name="duration3"></td><td><input type="text" id="hourly3" name="hourly3"</td></tr>
+                 <tr><td>Employee 4</td><td><input type="text" class="tabd1" id="duration4" name="duration4"></td><td><input type="text" id="hourly4" name="hourly4"</td></tr>
+                 <tr><td>Employee 5</td><td><input type="text" class="tabd1" id="duration5" name="duration5"></td><td><input type="text" id="hourly5" name="hourly5"</td></tr>
+                 <tr><td>Employee 6</td><td><input type="text" class="tabd1" id="duration6" name="duration6"></td><td><input type="text" id="hourly6" name="hourly6"</td></tr>
+                  <tr ><td id="btns"><input type="submit"  value="Submit">
+                  <input type="reset" value="Reset"> 
+                 
+</td></tr>
+                 
+                 
+              </table>
+           
+
+             
+             <table id="pay">
+              <tr><th>Employees</th><th>Work Hours</th><th class="hp">Hourly Pay</th><th id="tp">Total Pay</th></tr>
+
+                 <tr><td>Employee 1</td><td><input type="text" class="tabd1" id="outDur1" name="durationa"></td><td><input type="text" id="outHourly1" name="hourlya"</td><td><input type="text" id="gross1"</td></tr>
+                 <tr><td>Employee 2</td><td><input type="text" class="tabd1" id="outDur2"  name="durationb"></td><td><input type="text" id="outHourly2" name="hourlyb"</td><td><input type="text" id="gross2"</td></tr>
+                 <tr><td>Employee 3</td><td><input type="text" class="tabd1" id="outDur3" name="durationc"></td><td><input type="text" id="outHourly3" name="hourlyc"</td><td><input type="text" id="gross3"</td></tr>
+                 <tr><td>Employee 4</td><td><input type="text" class="tabd1" id="outDur4" name="durationd"></td><td><input type="text" id="outHourly4" name="hourlyd"</td><td><input type="text" id="gross4"</td></tr>
+                 <tr><td>Employee 5</td><td><input type="text" class="tabd1" id="outDur5" name="duratione"></td><td><input type="text" id="outHourly5" name="hourlye"</td><td><input type="text" id="gross5"</td></tr>
+                 <tr><td>Employee 6</td><td><input type="text" class="tabd1" id="outDur6" name="durationf"></td><td><input type="text" id="outHourly6" name="hourlyf"</td><td><input type="text" id="gross6"</td></tr>
+             
+             
+             </table>
+            
+                          </form>
+            
+        
+        </div>
+<script> 
+    
+    function payrates(){
+        for( var i = 1; i <= 6; i++){
+     var inputDuration, inputHourlyWage, overTime;
+        inputDuration = parseFloat(document.getElementById("duration" +i).value);
+        inputHourlyWage = parseFloat(document.getElementById("hourly" +i).value);
+        grossPay = (inputDuration) * (inputHourlyWage);
+            overTime = inputDuration * 1.5;
+            if (inputDuration > 40){
+                grossPay = (inputDuration - 40) * 1.5 * inputHourlyWage + 40 * inputHourlyWage;
+                
+            }
+            else if (isNaN(inputDuration, inputHourlyWage)){
+                 alert("Invalid Entry. Enter Numbers Only!")
+             }
+
+            else{
+                grossPay = inputDuration * inputHourlyWage;
+            }
+               
+                    
+            /*pseudo-code:
+if hours > 40
+gross = (hours - 40) * 1.5 * rate + 40 * rate
+else
+gross = hours * rate*/
+            
+        
+         document.getElementById("outDur" +i).value=  inputDuration.toFixed(2);
+    document.getElementById("outHourly" +i).value= inputHourlyWage.toFixed(2);
+        document.getElementById("gross" +i).value = grossPay.toFixed(2);
+            }
+        
+    }
+        
+    </script>
+
+
+
+ 
+   <footer> <span><a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fhills.ccsf.edu%2F~shaycraf%2FCNIT133%2Fhw4&profile=css3&usermedium=all&warning=1&vextwarning=&lang=en" target="_blank">
+            <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" />
+        </a>
+
+        <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fhills.ccsf.edu%2F~shaycraf%2FCNIT133%2Fhw4%2F" target="_blank">
+            <img src="https://www.w3.org/html/logo/badge/html5-badge-h-css3-semantics.png" width="165" height="31" alt="HTML5 Powered with CSS3 / Styling, and Semantics" title="HTML5 Powered with CSS3 / Styling, and Semantics">
+            </a></span></footer>
+        <!--Part 2: 
+
+Create a webpage that contains a script that will determine the gross pay for each of six employees. The company pays "straight time" for the first 40 hours worked by each employee and pays "time and a half" for all hours worked in excess of 40 hours. You are given a list of the employees of the company, the number of hours worked last week and the hourly rate of each employee. Your script should input this information for each employee, determine the employee's gross pay and then displays the employee's gross pay. Be sure to round the outputted results to 2 decimal places. You should also check for valid input and right-justify all amounts. Use form text boxes to input the data. Here is a sample display (Links to an external site.) using tables and form elements. -->
+</body>
+
+</html>

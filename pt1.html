@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CNIT133 HW4 PT1</title>
+    <meta charset="utf-8">
+    <meta name="description" content="This is part one of hw4 do while loop.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+
+  <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        body {
+            background-color: grey;
+        }
+        
+        nav {
+            margin-top: 2%;
+        }
+        
+        ul {
+            margin-left: 25%;
+            margin-bottom: 5px;
+        }
+        
+        li,
+        a {
+            list-style-type: none;
+            display: inline-block;
+            text-decoration: none;
+            background-color: greenyellow;
+            padding: 10px;
+            color: black;
+            font-weight: bold;
+        }
+        a:hover{
+            color:red;
+          
+        }
+        li:hover{
+              background-color:grey;
+        }
+        
+        table, td{
+            
+            padding:3px;
+            position:relative;
+            float:left;
+            clear:both;
+            
+        }
+        td:first-of-type{
+        border: 1px solid black;
+            padding:0px;
+        }
+        #box{
+            height:600px;
+            width:75%;
+            background-color:red;
+            float:right;
+            position:relative
+            
+        }
+      aside{
+          width:20%;
+      }
+      h2{
+         margin:20% 38%;
+     }
+      footer{
+          position:fixed;
+          bottom:0;
+          margin-left:35%;
+        
+      }
+      #pt1a{
+          font-weight:bold;
+          font-size:20px;
+          margin-left:20px; 
+          background-color: black;
+          color:aliceblue;
+          padding:10px;
+      }
+      #pt1b{
+          font-weight:bold;
+          font-size:20px;
+          margin-left:20px; 
+          background-color: aliceblue;
+          color:red;
+          padding:10px;
+      }
+    
+      #drag{
+          margin-left:20px;
+      }
+     
+    </style>
+   
+
+  <style>
+  #draggable { width: 150px; height: 450px; padding: 0.5em; }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#draggable" ).draggable();
+  } );
+  </script>
+
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="https://hills.ccsf.edu/~shaycraf/CNIT133/hw1">HW 1</a></li>
+            <li> <a href="https://hills.ccsf.edu/~shaycraf/CNIT133/hw2">HW 2</a></li>
+            <li> <a href="https://hills.ccsf.edu/~shaycraf/CNIT133/hw3">HW 3</a></li>
+            <li> <a href="https://hills.ccsf.edu/~shaycraf/CNIT133/hw4">HW 4</a></li>
+            <li> <a href="https://hills.ccsf.edu/~shaycraf/CNIT133/hw5">HW 5</a></li>
+            <li> <a href="https://hills.ccsf.edu/~shaycraf/CNIT133/hw6">HW 6</a></li>
+            <li> <a href="undercnst7.html">HW 7</a></li>
+            <li> <a href="undercnst8.html">HW 8</a></li>
+
+        </ul>
+
+    </nav>
+    <aside>
+        <table>
+            <tr>
+                <td><a href=pt1.html>Part 1:</a></td>
+                <td>Part one uses the for and while loop to calulate numers
+                and uses draggable jQuery.</td>
+            </tr>
+            <tr>
+                <td><a href=pt2.html>Part 2:</a></td>
+                <td>This script determines the gross pay<br> 
+                    for each of six employees.</td>
+            </tr>
+            <tr>
+                <td><a href=pt3.html>Part 3:</a></td>
+                <td> This script calculates compound interest on a principal of $1000 for interest rates of 5, 6, 7, 8, 9, and 10%, for years 1 through 10.</td>
+            </tr>
+            <tr>
+                <td><a href=pt4.html>Part 4:</a></td>
+                <td>This script uses a switch statement to help determine the retail price for each product and calculates and displays the retail amount for each product and the total retail amount of all the products sold last week.</td>
+            </tr>
+            <tr>
+                <td><a href=pt5.html>Part 5:</a></td>
+                <td>This script uses a form text box for one of three different list formats. It Uses jQuery to show/hide instructions and validate input data.</td>
+            </tr>
+            <tr>
+                <td><a href=pt6.html>Part 6:</a></td>
+                <td>This page contains a script that uses repetition and switch statements to print the song "The Twelve Days of Christmas".</td>
+            </tr>
+           
+
+        </table>
+    </aside>
+        <div id="box">
+             <div id="draggable" class="ui-widget-content">
+  <p id="drag">Drag text around!</p>
+         <div id="pt1a">
+             
+              <script>
+              var addIt = 0;
+                 var timesIt = 1;             
+        for(x = 5; x<=20; x +=3){
+            
+            addIt += x;
+            timesIt *= x;
+            
+            document.getElementById("pt1a").innerHTML = "5 + 8 + 11 + 14 + 17 + 20 = " + addIt + '<br><br>' + "5 * 8 * 11 * 14 * 17 * 20 = " + timesIt;   
+        };
+              
+               
+             </script>
+                 </div>
+                 <br>
+             <div id="pt1b">
+            <script>
+                var add=0;
+                var multip=1;
+               
+               for(i=3; i<=31; i+=4){
+               
+                  add+=i;
+                  multip*=i;
+                
+             document.getElementById("pt1b").innerHTML = "3 + 7 + 11 + 15 + 19 + 23 + 27 + 31 = " + add + '<br><br>' + "3 * 7 * 11 * 15 * 19 * 23 * 27 * 31 = " + multip;
+        
+              };
+            
+                
+             </script>
+           </div>
+                    <!-- <section id="dragin">
+            <script>
+                 On the same webpage as Part 1a, create a script, using the while or do while statement, that calculates the product and sum of every fourth integer from 3 to 31 inclusive and then displays the results, along with some accompanying text.
+
+(Note: You should print a line that contains the result of 3 * 7 * 11 * 15 * 19 * 23 * 27 * 31 and a second line that contains the result of 3 + 7 + 11 + 15 + 19 + 23 + 27 + 31). 
+                </script>
+           
+            
+            </section>-->
+                    
+</div>
+        </div>
+         
+            
+        </div>
+
+
+
+
+ 
+   <footer> <span><a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fhills.ccsf.edu%2F~shaycraf%2FCNIT133%2Fhw4&profile=css3&usermedium=all&warning=1&vextwarning=&lang=en" target="_blank">
+            <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" />
+        </a>
+
+        <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fhills.ccsf.edu%2F~shaycraf%2FCNIT133%2Fhw4%2F" target="_blank">
+            <img src="https://www.w3.org/html/logo/badge/html5-badge-h-css3-semantics.png" width="165" height="31" alt="HTML5 Powered with CSS3 / Styling, and Semantics" title="HTML5 Powered with CSS3 / Styling, and Semantics">
+            </a></span></footer>
+         <!-- Part 1: 
+
+Part 1a: Create a webpage that contains a script, using the for statement, that calculates the product and sum of every third integer from 5 to 20 inclusive and then displays the results, along with some accompanying text.
+
+(Note: You should print a line that contains the result of 5 * 8 * 11 * 14 * 17 * 20 and a second line that contains the result of 5 + 8 + 11 + 14 + 17 + 20). 
+
+Part 1b: On the same webpage as Part 1a, create a script, using the while or do while statement, that calculates the product and sum of every fourth integer from 3 to 31 inclusive and then displays the results, along with some accompanying text.
+
+(Note: You should print a line that contains the result of 3 * 7 * 11 * 15 * 19 * 23 * 27 * 31 and a second line that contains the result of 3 + 7 + 11 + 15 + 19 + 23 + 27 + 31). 
+
+Use jQuery UI to allow the user to drag an element to a specific area of the page. For more on jQuery UI draggable see this page (Links to an external site.). -->
+</body>
+
+</html>

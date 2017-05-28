@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CNIT133 HW4 PT6</title>
+    <meta charset="utf-8">
+    <meta name="description" content="This page uses repetition and switch statements to print the song "The Twelve Days of Christmas".">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        body {
+            background-color: grey;
+        }
+        
+        nav {
+            margin-top: 2%;
+        }
+        
+        ul {
+            margin-left: 25%;
+            margin-bottom: 5px;
+        }
+        
+        li,
+        a {
+            list-style-type: none;
+            display: inline-block;
+            text-decoration: none;
+            background-color: greenyellow;
+            padding: 10px;
+            color: black;
+            font-weight: bold;
+        }
+        
+        a:hover {
+            color: red;
+        }
+        
+        li:hover {
+            background-color: grey;
+        }
+        
+        table,
+        td {
+            padding: 3px;
+            position: relative;
+            float: left;
+            clear: both;
+        }
+        
+        td:first-of-type {
+            border: 1px solid black;
+            padding: 0px;
+        }
+        
+        div {
+            height: 600px;
+            width: 75%;
+            background-color: grey;
+            float: right;
+            position: relative
+        }
+        
+        aside {
+            width: 20%;
+        }
+        
+        h2 {
+            margin: 20% 38%;
+        }
+        
+        footer {
+            position: fixed;
+            bottom: 0;
+            margin-left: 77%;
+            
+        }
+    </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script> 
+$(document).ready(function(){
+    $("button").click(function(){
+        var div = $("#anim");
+        div.animate({height: '200px', opacity: '0.4'}, "slow");
+        div.animate({width: '200px', opacity: '0.8'}, "slow");
+        div.animate({height: '100px', opacity: '0.4'}, "slow");
+        div.animate({width: '100px', opacity: '0.8'}, "slow");
+    });
+});
+</script> 
+
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="https://hills.ccsf.edu/~shaycraf/CNIT133/hw1">HW 1</a></li>
+            <li> <a href="https://hills.ccsf.edu/~shaycraf/CNIT133/hw2">HW 2</a></li>
+            <li> <a href="https://hills.ccsf.edu/~shaycraf/CNIT133/hw3">HW 3</a></li>
+            <li> <a href="https://hills.ccsf.edu/~shaycraf/CNIT133/hw4">HW 4</a></li>
+            <li> <a href="https://hills.ccsf.edu/~shaycraf/CNIT133/hw5">HW 5</a></li>
+            <li> <a href="https://hills.ccsf.edu/~shaycraf/CNIT133/hw6">HW 6</a></li>
+            <li> <a href="undercnst7.html">HW 7</a></li>
+            <li> <a href="undercnst8.html">HW 8</a></li>
+
+        </ul>
+
+    </nav>
+    <aside>
+        <table>
+            <tr>
+                <td><a href=pt1.html>Part 1:</a></td>
+                <td>Part one uses the for and while loops to calulate numers
+                    <br> and uses draggable jQuery.</td>
+            </tr>
+            <tr>
+                <td><a href=pt2.html>Part 2:</a></td>
+
+                <td>This script determines the gross pay for each of six employees.</td>
+            </tr>
+            <tr>
+                <td><a href=pt3.html>Part 3:</a></td>
+                <td> This script calculates compound interest on a principal of $1000 for interest rates of 5, 6, 7, 8, 9, and 10%, for years 1 through 10.</td>
+            </tr>
+            <tr>
+                <td><a href=pt4.html>Part 4:</a></td>
+                <td>This script uses a switch statement to help determine the retail price for each product and calculates and displays the retail amount for each product and the total retail amount of all the products sold last week.</td>
+            </tr>
+            <tr>
+                <td><a href=pt5.html>Part 5:</a></td>
+                <td>This script uses a form text box for one of three different list formats. It Uses jQuery to show/hide instructions and validate input data.</td>
+            </tr>
+            <tr>
+                <td><a href=pt6.html>Part 6:</a></td>
+                <td>This page contains a script that uses repetition and switch statements to print the song "The Twelve Days of Christmas".</td>
+            </tr>
+
+
+        </table>
+    </aside>
+    <div id="container">
+        
+
+        <div id="lyrics">
+            
+            <script>
+             var day, gift, giftSet = "", lineBreak = "";
+
+for (j = 1; j <= 12; j++) {
+    switch (j) {
+        case 1:
+            day = "first";
+            gift = "A Partridge in a Pear Tree";
+            break;
+        case 2:
+            day = "second";
+            gift = "Two Turtle Doves";
+            lineBreak = "<br>";
+            giftSet = "and a Partridge in a Pear Tree";
+            break;
+        case 3:
+            day = "third";
+            gift = "Three French Hens";
+            break;
+            case 4:
+            day = "fourth";
+            gift = "Four Calling Birds";
+            break;
+            case 5:
+            day = "fifth";
+            gift = "Five Golden Rings";
+            break;
+            case 6:
+            day = "sixth";
+            gift = "Six Geese a Laying";
+            break;
+            case 7:
+            day = "seventh";
+            gift = "Seven Swans a Swimming";
+            break;
+            case 8:
+            day = "eighth";
+            gift = "Eight Maids a Milking";
+            break;
+            case 9:
+            day = "ninth";
+            gift = "Nine Ladies Dancing";
+            break;
+            case 10:
+            day = "tenth";
+            gift = "Ten Lords a Leaping";
+            break;
+            case 11:
+            day = "eleventh";
+            gift = "Eleven Pipers Piping";
+            break;
+            case 12:
+            day = "twelfth";
+            gift = "12 Drummers Drumming";
+            break;
+    }
+    document.writeln("On the " + day + " day of Christmas<br>my true love gave to me:<br>");
+    giftSet = gift + lineBreak + giftSet;
+    document.writeln(giftSet + "<br><br>")
+}
+            </script>
+            
+        </div>
+        <button>Start Animation</button><br>
+        <span id="anim" style="background:#98bf21;height:100px;width:100px;position:absolute;"> <img src="cimage.jpg"></span>
+        
+    </div>
+
+   
+
+
+
+
+
+
+    <!-- On the first day of Christmas
+my true love sent to me:
+A Partridge in a Pear Tree7
+
+On the second day of Christmas
+my true love sent to me:
+Two Turtle Doves
+and a Partridge in a Pear Tree2
+
+On the third day of Christmas
+my true love sent to me:
+Three French Hens
+Two Turtle Doves
+and a Partridge in a Pear Tree1
+
+On the fourth day of Christmas
+my true love sent to me:
+Four Calling Birds
+Three French Hens
+Two Turtle Doves
+and a Partridge in a Pear Tree1
+
+On the fifth day of Christmas
+my true love sent to me:
+Five Golden Rings
+Four Calling Birds
+Three French Hens
+Two Turtle Doves
+and a Partridge in a Pear Tree2
+
+On the sixth day of Christmas
+my true love sent to me:
+Six Geese a Laying
+Five Golden Rings
+Four Calling Birds
+Three French Hens
+Two Turtle Doves
+and a Partridge in a Pear Tree1
+
+On the seventh day of Christmas
+my true love sent to me:
+Seven Swans a Swimming
+Six Geese a Laying
+Five Golden Rings
+Four Calling Birds
+Three French Hens
+Two Turtle Doves
+and a Partridge in a Pear Tree1
+
+On the eighth day of Christmas
+my true love sent to me:
+Eight Maids a Milking
+Seven Swans a Swimming
+Six Geese a Laying
+Five Golden Rings
+Four Calling Birds
+Three French Hens
+Two Turtle Doves
+and a Partridge in a Pear Tree
+
+On the ninth day of Christmas
+my true love sent to me:
+Nine Ladies Dancing
+Eight Maids a Milking
+Seven Swans a Swimming
+Six Geese a Laying
+Five Golden Rings
+Four Calling Birds
+Three French Hens
+Two Turtle Doves
+and a Partridge in a Pear Tree1
+
+On the tenth day of Christmas
+my true love sent to me:
+Ten Lords a Leaping
+Nine Ladies Dancing
+Eight Maids a Milking
+Seven Swans a Swimming
+Six Geese a Laying
+Five Golden Rings
+Four Calling Birds
+Three French Hens
+Two Turtle Doves
+and a Partridge in a Pear Tree1
+
+On the eleventh day of Christmas
+my true love sent to me:
+Eleven Pipers Piping
+Ten Lords a Leaping
+Nine Ladies Dancing
+Eight Maids a Milking
+Seven Swans a Swimming
+Six Geese a Laying
+Five Golden Rings
+Four Calling Birds
+Three French Hens
+Two Turtle Doves
+and a Partridge in a Pear Tree1
+
+On the twelfth day of Christmas
+my true love sent to me:
+12 Drummers Drumming
+Eleven Pipers Piping
+Ten Lords a Leaping
+Nine Ladies Dancing
+Eight Maids a Milking
+Seven Swans a Swimming
+Six Geese a Laying
+Five Golden Rings
+Four Calling Birds
+Three French Hens
+Two Turtle Doves
+and a Partridge in a Pear Tree -->
+
+
+
+
+    <footer> <span><a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fhills.ccsf.edu%2F~shaycraf%2FCNIT133%2Fhw4&profile=css3&usermedium=all&warning=1&vextwarning=&lang=en" target="_blank">
+            <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" />
+        </a>
+
+        <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fhills.ccsf.edu%2F~shaycraf%2FCNIT133%2Fhw4%2F" target="_blank">
+            <img src="https://www.w3.org/html/logo/badge/html5-badge-h-css3-semantics.png" width="165" height="31" alt="HTML5 Powered with CSS3 / Styling, and Semantics" title="HTML5 Powered with CSS3 / Styling, and Semantics">
+            </a></span></footer>
+
+    <!--Part 6:
+
+Create a webpage that contains a script that uses repetition and switch statements to print the song "The Twelve Days of Christmas". One switch statement should be used to print the day (i.e., "First," "Second," etc.). A separate switch statement should be used to print the remainder of each verse. Use jQuery to add some animation to the page using a christmas image. See this jquery example (Links to an external site.) and this jquery example (Links to an external site.). You can find the words of the song at the site:
+
+
+http://www.metrolyrics.com/12-days-of-christmas-lyrics-christmas-song.html (Links to an external site.)
+
+ -->
+</body>
+
+</html>
